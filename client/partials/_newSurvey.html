@@ -1,0 +1,16 @@
+<a href="#/dashboard">Cancel</a>
+<h2>Put the question and options here:</h2>
+
+<p>{{errorsQuestion}}</p>
+<p>{{errorsOption1}}</p>
+<p>{{errorsOption2}}</p>
+<p>{{errorsOption3}}</p>
+<p>{{errorsOption4}}</p>
+<form ng-submit="addSurvey(userName)">
+	Question: <input type="text" ng-model="newSurvey.question">
+	Option 1: <input type="text" ng-model="newSurvey.option1">
+	Option 2: <input type="text" ng-model="newSurvey.option2">
+	Option 3: <input type="text" ng-model="newSurvey.option3">
+	Option 4: <input type="text" ng-model="newSurvey.option4">
+	<input type="submit" value="Create Poll">
+</form>

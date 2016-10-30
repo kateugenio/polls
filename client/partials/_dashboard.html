@@ -1,0 +1,23 @@
+<h2>Current Polls</h2>
+
+<a href="#/create/{{userID}}">Create a New Poll</a>
+<button type="button" ng-click="deleteUser(userID)">Logout</button>
+
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Survey Question</th>
+			<th>Date Posted</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="survey in surveys">
+			<td>{{survey.user}}</td>
+			<td><a href="#/poll/{{survey._id}}">{{survey.question}}</a></td>
+			<td>{{survey.createdAt | date: MM-dd-YYYY}}</td>
+			<td><button type="button" ng-click="deleteSurvey(survey._id)">Delete</button></td>
+		</tr>
+	</tbody>
+</table>
